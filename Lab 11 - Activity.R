@@ -28,7 +28,7 @@ microbenchmark(binom.generate(100, 30, 0.4), rbinom(100, 30, 0.4))
 set.seed(10)
 x = runif(50, 20, 40)
 res = rnorm(50, 0, 3)
-y = 15 + 0.4*x + res
+y = 15 + 0.4 * x + res
 
 fit = lm(y ~ x)
 
@@ -51,10 +51,10 @@ norm_generate = function(n) {
       if(i %% 2 == 1) {
         U1 = runif(1, 0, 1)
         U2 = runif(1, 0, 1)
-        R = sqrt(-2*log(U1))
-        theta = 2*pi*U2
-        x = R*cos(theta)
-        y = R*sin(theta)
+        R = sqrt(-2 * log(U1))
+        theta = 2 * pi * U2
+        x = R * cos(theta)
+        y = R * sin(theta)
         result[i] = x
         result[i+1] = y
       }
